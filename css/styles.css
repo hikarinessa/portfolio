@@ -56,18 +56,19 @@ a { color: inherit; }
 /* ---------- cross-page view transitions (L2 width morph) ---------- */
 @view-transition { navigation: auto; }
 
-/* Make <main> and the header's inner row the width-bearing elements so
-   their boxes morph between the wide Showcase (1200) and narrow CV (880)
-   widths on navigation, then the content settles. */
+/* <main> carries the content-column width (1200 Showcase / 880 CV) so the
+   layout narrows between pages. We morph the header row and the hero — both
+   modest, in-viewport elements — rather than the page-tall <main>, whose
+   oversized snapshot causes a flash. Everything else cross-fades. */
 main {
-  view-transition-name: pagecol;
   width: min(100% - 2.5rem, var(--maxw));
   margin-inline: auto;
 }
 main .wrap { width: 100%; }
 .header-inner { view-transition-name: header-inner; }
+.hero { view-transition-name: hero; }
 
-::view-transition-group(pagecol),
+::view-transition-group(hero),
 ::view-transition-group(header-inner) {
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
