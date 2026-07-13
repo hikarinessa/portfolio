@@ -83,19 +83,17 @@ body > * { position: relative; z-index: 1; }
   font-family: var(--display); font-weight: 800; font-size: 1.15rem;
   letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
 }
-.wordmark-mark {
-  width: 18px; height: 18px; border-radius: 3px;
-  background:
-    repeating-conic-gradient(var(--checker-a) 0% 25%, var(--checker-b) 0% 50%)
-    50% / 9px 9px;
-}
 .nav { display: flex; align-items: center; gap: 1.25rem; }
 .nav a {
   font-family: var(--mono); font-size: 0.8rem; text-decoration: none;
   color: var(--ink-soft); letter-spacing: 0.02em;
 }
 .nav a:hover { color: var(--accent); }
-.nav a[aria-current="page"] { color: var(--ink); }
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 3px;
+}
 .nav-meta {
   font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint);
   border-left: 1px solid var(--line); padding-left: 1.25rem;
@@ -298,12 +296,6 @@ body > * { position: relative; z-index: 1; }
   font-family: var(--mono); font-size: 0.78rem; color: var(--ink-faint);
 }
 .footer-inner p { margin: 0; }
-.foot-mark {
-  width: 14px; height: 14px; border-radius: 3px;
-  background:
-    repeating-conic-gradient(var(--checker-a) 0% 25%, var(--checker-b) 0% 50%)
-    50% / 7px 7px;
-}
 
 /* ---------- closing catch-all card ---------- */
 .card--more {
