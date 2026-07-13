@@ -95,6 +95,7 @@ body > * { position: relative; z-index: 1; }
   color: var(--ink-soft); letter-spacing: 0.02em;
 }
 .nav a:hover { color: var(--accent); }
+.nav a[aria-current="page"] { color: var(--ink); }
 .nav-meta {
   font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint);
   border-left: 1px solid var(--line); padding-left: 1.25rem;
