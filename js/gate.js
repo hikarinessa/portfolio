@@ -1,23 +1,34 @@
-// Passcode gate for encrypted card media.
-// The encrypted blob is public but useless without the passcode: it is
-// AES-256-GCM ciphertext, and the passcode is the only key. Decryption
-// happens entirely in the browser; a wrong passcode fails the GCM auth tag.
+// Passcode gate for an encrypted walkthrough video.
+// The card shows a public screenshot; a lock button reveals a passcode field.
+// The walkthrough is AES-256-GCM ciphertext (assets/web/sw.enc) — public but
+// useless without the passcode, which is the only key. Decryption happens
+// entirely in the browser; a wrong passcode fails the GCM auth tag.
 (function () {
   const ITER = 250000; // must match tools/encrypt-asset.mjs
 
   document.querySelectorAll('[data-gate]').forEach((card) => {
+    const media = card.querySelector('.card-media');
+    const trigger = card.querySelector('.gate-trigger');
     const form = card.querySelector('.gate-form');
     const input = card.querySelector('.gate-input');
     const errEl = card.querySelector('.gate-error');
-    const media = card.querySelector('.card-media');
     const encUrl = card.dataset.enc;
     const idxLabel = card.dataset.index || '';
     let cipher = null;
 
-    if (!crypto?.subtle) {
-      errEl.textContent = 'Needs a secure (https) connection.';
-      form.querySelector('.gate-btn').disabled = true;
-      return;
+    if (trigger) {
+      trigger.addEventListener('click', () => {
+        media.classList.add('gate-open');
+        form.hidden = false;
+        trigger.setAttribute('aria-expanded', 'true');
+        trigger.hidden = true;
+        if (!crypto?.subtle) {
+          errEl.textContent = 'Needs a secure (https) connection.';
+          form.querySelector('.gate-btn').disabled = true;
+          return;
+        }
+        input.focus();
+      });
     }
 
     async function loadCipher() {
@@ -54,9 +65,10 @@
         const video = document.createElement('video');
         video.className = 'card-video';
         video.autoplay = true; video.loop = true; video.muted = true;
-        video.playsInline = true; video.src = url;
+        video.playsInline = true; video.controls = true; video.src = url;
 
         media.innerHTML = '';
+        media.classList.remove('gate-open');
         media.appendChild(video);
         if (idxLabel) {
           const idx = document.createElement('span');
@@ -64,12 +76,11 @@
           idx.textContent = idxLabel;
           media.appendChild(idx);
         }
-        media.classList.remove('card-media--locked');
         card.classList.add('is-unlocked');
         video.play().catch(() => {});
       } catch (ex) {
         errEl.textContent = ex.message === 'missing'
-          ? 'Preview not available yet.'
+          ? 'Walkthrough not available yet.'
           : 'That passcode didn’t work.';
         form.classList.remove('is-busy');
         input.select();

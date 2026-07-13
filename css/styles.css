@@ -188,28 +188,27 @@ body > * { position: relative; z-index: 1; }
   padding: 0.15rem 0.5rem; border-radius: 4px; letter-spacing: 0.05em;
   backdrop-filter: blur(2px);
 }
-/* ---- passcode-gated (encrypted) media ---- */
-.card-media--locked {
-  display: flex; align-items: center; justify-content: center;
-}
-.card-media--locked::before {
-  content: ""; position: absolute; inset: 0; z-index: 1;
-  background: rgba(20, 23, 28, 0.62);
-  backdrop-filter: blur(1.5px);
-}
-.lock-badge {
-  position: absolute; top: 0.7rem; left: 0.85rem; z-index: 3;
+/* ---- passcode-gated walkthrough (public screenshot + on-demand unlock) ---- */
+.gate-trigger {
+  position: absolute; z-index: 3; bottom: 0.7rem; right: 0.85rem;
   display: inline-flex; align-items: center; gap: 0.35rem;
-  font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.06em;
-  color: #fff; background: rgba(20, 23, 28, 0.6);
-  padding: 0.2rem 0.5rem; border-radius: 4px;
+  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em;
+  color: #fff; background: rgba(20, 23, 28, 0.68); cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 999px;
+  padding: 0.3rem 0.62rem;
+}
+.gate-trigger:hover { background: var(--accent); border-color: transparent; }
+.gate-trigger[hidden] { display: none; }
+.card-media.gate-open::before {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  background: rgba(20, 23, 28, 0.74); backdrop-filter: blur(2px);
 }
 .gate-form {
-  position: relative; z-index: 2;
-  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
-  padding: 1rem; text-align: center; width: 100%;
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.55rem; padding: 1rem; text-align: center;
 }
-.gate-lock { color: #fff; opacity: 0.92; line-height: 0; }
+.gate-form[hidden] { display: none; }
 .gate-label {
   font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: #fff;

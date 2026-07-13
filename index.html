@@ -52,16 +52,57 @@
       </div>
 
       <div class="cards">
-        <!-- Real media wired in; names real; problem + AI notes are stubs to replace. -->
 
-        <!-- 01 Onyx -->
+        <!-- 01 Small World — public screenshot, passcode-gated walkthrough -->
+        <article class="card card--gated" data-gate data-enc="assets/web/sw.enc" data-index="01">
+          <div class="card-media" role="group" aria-label="Small World preview">
+            <img class="card-video" src="assets/web/smallworld.png" alt="Small World preview" />
+            <span class="card-index">01</span>
+            <button class="gate-trigger" type="button" aria-expanded="false" aria-controls="sw-form">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              Walkthrough
+            </button>
+            <form class="gate-form" id="sw-form" hidden aria-label="Unlock Small World walkthrough">
+              <label class="gate-label" for="sw-pass">Passcode</label>
+              <div class="gate-row">
+                <input class="gate-input" id="sw-pass" type="password" inputmode="text"
+                       autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="passcode" />
+                <button class="gate-btn" type="submit">Unlock</button>
+              </div>
+              <p class="gate-error" role="alert" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Small World</h3>
+              <span class="status status--archived">Past chapter</span>
+            </div>
+            <p class="card-problem">
+              A cross-platform product I helped build as part of a small team.
+              The full walkthrough is passcode-gated — the file is encrypted,
+              not just hidden.
+            </p>
+            <dl class="specsheet">
+              <div><dt>MVP</dt><dd>—</dd></div>
+              <div><dt>Stack</dt><dd>React · Capacitor · Rust · TS</dd></div>
+              <div><dt>Role</dt><dd>Developer in a team</dd></div>
+              <div><dt>Link</dt><dd><span class="muted">Private</span></dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              Stub — optional. Fill in or leave gated.
+            </p>
+          </div>
+        </article>
+
+        <!-- 02 Onyx -->
         <article class="card">
-          <a class="card-media" href="#" aria-label="Onyx preview">
+          <a class="card-media media--alt" href="https://github.com/hikarinessa/onyx" target="_blank" rel="noopener" aria-label="Onyx preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/Onyx.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">01</span>
+            <span class="card-index">02</span>
           </a>
           <div class="card-body">
             <div class="card-titlerow">
@@ -91,14 +132,14 @@
           </div>
         </article>
 
-        <!-- 02 Clingy -->
+        <!-- 03 Clingy -->
         <article class="card">
-          <a class="card-media media--alt" href="#" aria-label="Clingy preview">
+          <a class="card-media" href="#" aria-label="Clingy preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/Clingy.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">02</span>
+            <span class="card-index">03</span>
           </a>
           <div class="card-body">
             <div class="card-titlerow">
@@ -106,29 +147,33 @@
               <span class="status status--active">Active</span>
             </div>
             <p class="card-problem">
-              Stub — one line: who it's for and what pain it removes.
+              A fingerboard training companion for climbers — build a session,
+              run it on a glanceable timer, log every hang. Ships as an Android APK.
             </p>
             <dl class="specsheet">
-              <div><dt>MVP</dt><dd>— days with AI</dd></div>
-              <div><dt>Stack</dt><dd>TBD</dd></div>
+              <div><dt>MVP</dt><dd>One afternoon with AI</dd></div>
+              <div><dt>Stack</dt><dd>Kotlin · Jetpack Compose · Android</dd></div>
               <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><a href="#">View demo →</a></dd></div>
+              <div><dt>Link</dt><dd><span class="muted">Android APK — on request</span></dd></div>
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              Stub — what AI did vs. what you did. Your voice.
+              I interviewed the customer — a climber — until the spec was complete
+              enough for Claude to one-shot the mockup. A couple of refinement passes
+              later, it built the working app. Start to installable APK: a single
+              afternoon.
             </p>
           </div>
         </article>
 
-        <!-- 03 Kari Notes -->
+        <!-- 04 Kari Notes -->
         <article class="card">
-          <a class="card-media" href="#" aria-label="Kari Notes preview">
+          <a class="card-media media--alt" href="#" aria-label="Kari Notes preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/KariNotes.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">03</span>
+            <span class="card-index">04</span>
           </a>
           <div class="card-body">
             <div class="card-titlerow">
@@ -136,56 +181,65 @@
               <span class="status status--active">Active</span>
             </div>
             <p class="card-problem">
-              Stub — one line: who it's for and what pain it removes.
+              My first note-taking app — a hybrid note / task / clipboard helper.
+              Notes are blocks you can mark done and copy to the clipboard in a tap.
             </p>
             <dl class="specsheet">
-              <div><dt>MVP</dt><dd>— days with AI</dd></div>
-              <div><dt>Stack</dt><dd>TBD</dd></div>
+              <div><dt>MVP</dt><dd>— with AI</dd></div>
+              <div><dt>Stack</dt><dd>Swift · SwiftUI · macOS</dd></div>
               <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><a href="#">View demo →</a></dd></div>
+              <div><dt>Link</dt><dd><span class="muted">macOS app — on request</span></dd></div>
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              Stub — what AI did vs. what you did. Your voice.
+              An early experiment in building a native macOS app with AI. SwiftUI
+              was new territory for me, so Claude carried most of the Swift while I
+              shaped the interaction model — the block/done/copy behaviour I wanted
+              to live with.
             </p>
           </div>
         </article>
 
-        <!-- 04 Camp Coordination -->
+        <!-- 05 Camp Coordination -->
         <article class="card">
-          <a class="card-media media--alt" href="#" aria-label="Camp Coordination preview">
+          <a class="card-media" href="#" aria-label="Camp Coordination preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">04</span>
+            <span class="card-index">05</span>
           </a>
           <div class="card-body">
             <div class="card-titlerow">
               <h3 class="card-title">Camp Coordination</h3>
-              <span class="status status--active">Active</span>
+              <span class="status status--shipped">Shipped</span>
             </div>
             <p class="card-problem">
-              Stub — one line: who it's for and what pain it removes.
+              A PWA for coordinating shifts and schedules at a co-created festival.
+              Define shift grids, roles and point values; people sign up, queue for
+              slots, and RSVP to activities.
             </p>
             <dl class="specsheet">
-              <div><dt>MVP</dt><dd>— days with AI</dd></div>
-              <div><dt>Stack</dt><dd>TBD</dd></div>
+              <div><dt>MVP</dt><dd>2 days with AI</dd></div>
+              <div><dt>Stack</dt><dd>SvelteKit · Supabase · TS</dd></div>
               <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><a href="#">View demo →</a></dd></div>
+              <div><dt>Link</dt><dd><span class="muted">Used live</span></dd></div>
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              Stub — what AI did vs. what you did. Your voice.
+              We needed something customisable and nothing off-the-shelf fit, so we
+              built our own. Claude did the SvelteKit + Supabase heavy lifting while
+              I drove the requirements from what the festival crew actually needed —
+              and it ran the real event.
             </p>
           </div>
         </article>
 
-        <!-- 05 Year Cal -->
+        <!-- 06 Year Cal -->
         <article class="card">
-          <a class="card-media" href="#" aria-label="Year Cal preview">
+          <a class="card-media media--alt" href="#" aria-label="Year Cal preview">
             <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
-            <span class="card-index">05</span>
+            <span class="card-index">06</span>
           </a>
           <div class="card-body">
             <div class="card-titlerow">
@@ -196,56 +250,14 @@
               Stub — one line: who it's for and what pain it removes.
             </p>
             <dl class="specsheet">
-              <div><dt>MVP</dt><dd>— days with AI</dd></div>
+              <div><dt>MVP</dt><dd>— with AI</dd></div>
               <div><dt>Stack</dt><dd>TBD</dd></div>
               <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><a href="#">View demo →</a></dd></div>
+              <div><dt>Link</dt><dd><span class="muted">TBD</span></dd></div>
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
               Stub — what AI did vs. what you did. Your voice.
-            </p>
-          </div>
-        </article>
-
-        <!-- 06 Small World — passcode-gated (encrypted media) -->
-        <article class="card card--gated" data-gate data-enc="assets/web/sw.enc" data-index="06">
-          <div class="card-media card-media--locked" role="group" aria-label="Small World — locked preview">
-            <span class="lock-badge">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-              Encrypted
-            </span>
-            <form class="gate-form" aria-label="Unlock Small World preview">
-              <span class="gate-lock" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-              </span>
-              <label class="gate-label" for="sw-pass">Passcode required</label>
-              <div class="gate-row">
-                <input class="gate-input" id="sw-pass" type="password" inputmode="text"
-                       autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="passcode" />
-                <button class="gate-btn" type="submit">Unlock</button>
-              </div>
-              <p class="gate-error" role="alert" aria-live="polite"></p>
-            </form>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">Small World</h3>
-              <span class="status status--archived">Past chapter</span>
-            </div>
-            <p class="card-problem">
-              A past collaboration. The walkthrough is passcode-gated — the file
-              is encrypted, not just hidden.
-            </p>
-            <dl class="specsheet">
-              <div><dt>MVP</dt><dd>—</dd></div>
-              <div><dt>Stack</dt><dd>TBD</dd></div>
-              <div><dt>Role</dt><dd>Co-built — your part</dd></div>
-              <div><dt>Link</dt><dd><span class="muted">Private</span></dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              Stub — optional. Fill in or leave gated.
             </p>
           </div>
         </article>

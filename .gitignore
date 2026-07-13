@@ -5,4 +5,6 @@
 # Only the optimized web versions in assets/web/ are tracked.
 assets/*.gif
 assets/*.png
+assets/*.mp4
+assets/*.mov
 !assets/web/
