@@ -142,7 +142,7 @@ body > * { position: relative; z-index: 1; }
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--gap);
 }
 
@@ -320,12 +320,6 @@ body > * { position: relative; z-index: 1; }
   gap: clamp(1rem, 3.5vw, 3rem); align-items: center;
 }
 .more-head { display: flex; align-items: center; gap: 0.7rem; }
-.more-mark {
-  width: 20px; height: 20px; border-radius: 4px; flex: none;
-  background:
-    repeating-conic-gradient(var(--checker-a) 0% 25%, var(--checker-b) 0% 50%)
-    50% / 10px 10px;
-}
 .more-text {
   margin: 0; max-width: 62ch;
   font-size: 1.05rem; color: var(--ink-soft);
@@ -428,7 +422,7 @@ body > * { position: relative; z-index: 1; }
 .cv-what a:hover { text-decoration: underline; }
 
 .cv-skills {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 1.5rem;
 }
 .cv-skill h4 {
