@@ -48,7 +48,7 @@
     <section class="work wrap" id="work" aria-label="Projects">
       <div class="work-head">
         <h2 class="section-title">Selected work</h2>
-        <p class="section-note">Hover-free · previews autoplay · copy is stub</p>
+        <p class="section-note">Previews autoplay · click any preview to enlarge</p>
       </div>
 
       <div class="cards">
@@ -97,13 +97,13 @@
 
         <!-- 02 Onyx -->
         <article class="card">
-          <a class="card-media media--alt" href="https://github.com/hikarinessa/onyx" target="_blank" rel="noopener" aria-label="Onyx preview">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Onyx preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/Onyx.mp4" type="video/mp4" />
             </video>
             <span class="card-index">02</span>
-          </a>
+          </div>
           <div class="card-body">
             <div class="card-titlerow">
               <h3 class="card-title">Onyx</h3>
@@ -121,26 +121,23 @@
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              The point of Onyx wasn't the editor — it was proving how fast and
-              reliable AI-assisted development has become. The design was the easy
-              part: replicate the custom Obsidian workflows I already live in, in a
-              lighter, faster app. The real work was architecting the AI
-              collaboration itself — building robust, repeatable ways to hand work
-              to Claude Code and trust what comes back. Onyx is the demonstration:
-              serious dev is more accessible now than most people realise.
+              I built Onyx to replicate my Obsidian setup in something lighter. The
+              design was clear from the start, so most of the work went into setting
+              up reliable ways to build with Claude Code — mostly an exercise in
+              good practices for AI-assisted dev.
             </p>
           </div>
         </article>
 
         <!-- 03 Clingy -->
         <article class="card">
-          <a class="card-media" href="#" aria-label="Clingy preview">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Clingy preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/Clingy.mp4" type="video/mp4" />
             </video>
             <span class="card-index">03</span>
-          </a>
+          </div>
           <div class="card-body">
             <div class="card-titlerow">
               <h3 class="card-title">Clingy</h3>
@@ -158,23 +155,22 @@
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              I interviewed the customer — a climber — until the spec was complete
-              enough for Claude to one-shot the mockup. A couple of refinement passes
-              later, it built the working app. Start to installable APK: a single
-              afternoon.
+              I interviewed the customer to get a spec complete enough for Claude to
+              one-shot the mockup. A couple of iterations to refine it, and Claude
+              built the app.
             </p>
           </div>
         </article>
 
         <!-- 04 Kari Notes -->
         <article class="card">
-          <a class="card-media media--alt" href="#" aria-label="Kari Notes preview">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Kari Notes preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/KariNotes.mp4" type="video/mp4" />
             </video>
             <span class="card-index">04</span>
-          </a>
+          </div>
           <div class="card-body">
             <div class="card-titlerow">
               <h3 class="card-title">Kari Notes</h3>
@@ -192,23 +188,22 @@
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              An early experiment in building a native macOS app with AI. SwiftUI
-              was new territory for me, so Claude carried most of the Swift while I
-              shaped the interaction model — the block/done/copy behaviour I wanted
-              to live with.
+              My first note-taking app, and my first time with SwiftUI. Claude wrote
+              most of the Swift; I worked out how the blocks, done-state and
+              clipboard should behave.
             </p>
           </div>
         </article>
 
         <!-- 05 Camp Coordination -->
         <article class="card">
-          <a class="card-media" href="#" aria-label="Camp Coordination preview">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Camp Coordination preview">
             <video class="card-video" autoplay loop muted playsinline preload="metadata"
                    aria-hidden="true">
               <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
             </video>
             <span class="card-index">05</span>
-          </a>
+          </div>
           <div class="card-body">
             <div class="card-titlerow">
               <h3 class="card-title">Camp Coordination</h3>
@@ -227,37 +222,70 @@
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              We needed something customisable and nothing off-the-shelf fit, so we
-              built our own. Claude did the SvelteKit + Supabase heavy lifting while
-              I drove the requirements from what the festival crew actually needed —
-              and it ran the real event.
+              We wanted something customisable and couldn't find an online tool that
+              fit, so I built our own with Claude.
             </p>
           </div>
         </article>
 
-        <!-- 06 Year Cal -->
+        <!-- 06 Issue Tracker -->
         <article class="card">
-          <a class="card-media media--alt" href="#" aria-label="Year Cal preview">
-            <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Issue Tracker preview">
+            <video class="card-video" autoplay loop muted playsinline preload="metadata"
+                   aria-hidden="true">
+              <source src="assets/web/IssueTracker.mp4" type="video/mp4" />
+            </video>
             <span class="card-index">06</span>
-          </a>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Issue Tracker</h3>
+              <span class="status status--active">Active</span>
+            </div>
+            <p class="card-problem">
+              A Linear-style issue tracker I built for the Small World devs — logging
+              tickets and triaging issues. Fully owned and customisable.
+            </p>
+            <dl class="specsheet">
+              <div><dt>MVP</dt><dd>— with AI</dd></div>
+              <div><dt>Stack</dt><dd>Next.js · Postgres · TS</dd></div>
+              <div><dt>Role</dt><dd>Solo</dd></div>
+              <div><dt>Link</dt><dd><span class="muted">Internal tool</span></dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              Built for the Small World devs to log and triage tickets. I wanted
+              something fully owned and customisable rather than an off-the-shelf tool.
+            </p>
+          </div>
+        </article>
+
+        <!-- 07 Year Cal -->
+        <article class="card">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
+            <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
+            <span class="card-index">07</span>
+          </div>
           <div class="card-body">
             <div class="card-titlerow">
               <h3 class="card-title">Year Cal</h3>
               <span class="status status--active">Active</span>
             </div>
             <p class="card-problem">
-              Stub — one line: who it's for and what pain it removes.
+              A yearly view for Google Calendar — the whole year at once, which
+              Google itself doesn't do well. Synced with my calendars, and I can
+              add, edit and update events straight from it.
             </p>
             <dl class="specsheet">
               <div><dt>MVP</dt><dd>— with AI</dd></div>
               <div><dt>Stack</dt><dd>TBD</dd></div>
               <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><span class="muted">TBD</span></dd></div>
+              <div><dt>Link</dt><dd><span class="muted">Personal tool</span></dd></div>
             </dl>
             <p class="ai-note">
               <span class="ai-label">How I built it with AI</span>
-              Stub — what AI did vs. what you did. Your voice.
+              Google Calendar has no good yearly view, so I made one. It stays synced
+              with my calendars, and I can add and edit events straight from it.
             </p>
           </div>
         </article>
@@ -269,8 +297,18 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span class="foot-mark" aria-hidden="true"></span>
-      <p>Built with Claude Code. First pass — stubs and placeholders.</p>
+      <p>Built with Claude Code.</p>
     </div>
   </footer>
+
+  <!-- Lightbox: click any card preview to enlarge -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged preview">
+    <button class="lightbox-close" type="button" aria-label="Close preview">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="lightbox-stage"></div>
+  </div>
+
+  <script src="js/lightbox.js" defer></script>
 </body>
 </html>

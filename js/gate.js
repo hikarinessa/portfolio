@@ -65,7 +65,7 @@
         const video = document.createElement('video');
         video.className = 'card-video';
         video.autoplay = true; video.loop = true; video.muted = true;
-        video.playsInline = true; video.controls = true; video.src = url;
+        video.playsInline = true; video.src = url;
 
         media.innerHTML = '';
         media.classList.remove('gate-open');
