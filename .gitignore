@@ -1,2 +1,8 @@
 .preview-*.png
 .DS_Store
+
+# Raw source media — kept locally, not committed (heavy; some exceed GitHub limits).
+# Only the optimized web versions in assets/web/ are tracked.
+assets/*.gif
+assets/*.png
+!assets/web/
