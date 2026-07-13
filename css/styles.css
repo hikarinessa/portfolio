@@ -53,6 +53,34 @@ a { color: inherit; }
 
 .wrap { width: min(100% - 2.5rem, var(--maxw)); margin-inline: auto; }
 
+/* ---------- cross-page view transitions (L2 width morph) ---------- */
+@view-transition { navigation: auto; }
+
+/* Make <main> and the header's inner row the width-bearing elements so
+   their boxes morph between the wide Showcase (1200) and narrow CV (880)
+   widths on navigation, then the content settles. */
+main {
+  view-transition-name: pagecol;
+  width: min(100% - 2.5rem, var(--maxw));
+  margin-inline: auto;
+}
+main .wrap { width: 100%; }
+.header-inner { view-transition-name: header-inner; }
+
+::view-transition-group(pagecol),
+::view-transition-group(header-inner) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 0.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
+}
+
 /* Faint blueprint grid behind everything */
 .grid-overlay {
   position: fixed;
