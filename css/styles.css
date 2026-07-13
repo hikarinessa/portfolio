@@ -344,7 +344,7 @@ body > * { position: relative; z-index: 1; }
   content: ""; position: absolute; left: 0; top: 0.6em;
   width: 6px; height: 6px; border-radius: 2px; background: var(--accent);
 }
-.more-foot { color: var(--ink-faint); font-size: 0.95rem; }
+.more-listlabel { margin-bottom: 0.6rem; color: var(--ink-soft); }
 @media (max-width: 680px) {
   .more-inner { grid-template-columns: 1fr; gap: 1.1rem; }
 }
@@ -394,6 +394,53 @@ body > * { position: relative; z-index: 1; }
 }
 .lightbox-close:hover { background: var(--accent); }
 .lightbox-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* ---------- CV page ---------- */
+.cv-role {
+  font-family: var(--mono); font-size: 0.95rem; color: var(--ink-soft);
+  letter-spacing: 0.01em; margin: 0 0 1.4rem;
+}
+.cv-contact {
+  display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin-top: 1.9rem;
+  font-family: var(--mono); font-size: 0.85rem; color: var(--ink-soft);
+}
+.cv-contact a { color: var(--accent-deep); text-decoration: none; }
+.cv-contact a:hover { text-decoration: underline; }
+
+.cv-section { padding: clamp(1.4rem, 3vw, 2.4rem) 0; }
+.cv-entries { display: flex; flex-direction: column; }
+.cv-entry {
+  display: grid; grid-template-columns: 9rem 1fr; gap: 1.5rem;
+  padding: 1.15rem 0; border-top: 1px solid var(--line-soft);
+}
+.cv-entry:first-child { border-top: 0; }
+.cv-when {
+  font-family: var(--mono); font-size: 0.78rem; color: var(--ink-faint);
+  padding-top: 0.2rem; letter-spacing: 0.01em;
+}
+.cv-what h3 {
+  font-family: var(--display); font-weight: 700; font-size: 1.12rem;
+  margin: 0 0 0.35rem; line-height: 1.25;
+}
+.cv-org { color: var(--ink-soft); font-weight: 600; }
+.cv-what p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+.cv-what a { color: var(--accent-deep); text-decoration: none; white-space: nowrap; }
+.cv-what a:hover { text-decoration: underline; }
+
+.cv-skills {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+.cv-skill h4 {
+  font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--accent-deep); margin: 0 0 0.5rem;
+}
+.cv-skill p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+@media (max-width: 620px) {
+  .cv-entry { grid-template-columns: 1fr; gap: 0.3rem; }
+  .cv-when { padding-top: 0; }
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 760px) {
