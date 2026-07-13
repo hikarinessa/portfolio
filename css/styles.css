@@ -390,6 +390,8 @@ body > * { position: relative; z-index: 1; }
 .lightbox-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
 /* ---------- CV page ---------- */
+/* Narrower content column for readable line length (document-style). */
+.cv-page { --maxw: 880px; }
 .cv-role {
   font-family: var(--mono); font-size: 0.95rem; color: var(--ink-soft);
   letter-spacing: 0.01em; margin: 0 0 1.4rem;
