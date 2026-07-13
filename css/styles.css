@@ -364,6 +364,31 @@ body > * { position: relative; z-index: 1; }
   .more-inner { grid-template-columns: 1fr; gap: 1.1rem; }
 }
 
+/* ---------- wide (horizontal) card variant — trial page ---------- */
+.cards--wide { display: flex; flex-direction: column; gap: clamp(1.5rem, 3vw, 2.5rem); }
+.wcard {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; min-height: 340px;
+  display: grid; grid-template-columns: 1fr 1.9fr; align-items: stretch;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.wcard:hover { border-color: var(--accent); box-shadow: 0 16px 40px -20px rgba(20,23,28,0.42); }
+.wcard:nth-child(even) { grid-template-columns: 1.9fr 1fr; }
+.wcard:nth-child(even) .card-media { order: -1; }
+.wcard-body {
+  padding: clamp(1.5rem, 3vw, 2.6rem);
+  display: flex; flex-direction: column; gap: 0.9rem; justify-content: center;
+}
+.wcard .card-media { aspect-ratio: auto; height: 100%; border: 0; border-radius: 0; }
+.wcard .ai-note { margin: 0.4rem 0 0; }
+.cards--wide .card--more { align-self: stretch; grid-column: auto; }
+
+@media (max-width: 820px) {
+  .wcard, .wcard:nth-child(even) { grid-template-columns: 1fr; min-height: 0; }
+  .wcard .card-media,
+  .wcard:nth-child(even) .card-media { order: -1; aspect-ratio: 16 / 10; height: auto; }
+}
+
 /* ---------- click-to-enlarge affordance ---------- */
 .card-media[role="button"] { cursor: zoom-in; }
 .card--gated .card-media { cursor: zoom-in; }

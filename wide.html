@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luz — AI-assisted projects</title>
+  <title>Luz — Work with AI (wide layout)</title>
   <meta name="description" content="Products built hands-on with AI. A technical artist shipping real tools, fast." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="js/gate.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
   <script src="js/hover-play.js" defer></script>
 </head>
 <body>
@@ -17,10 +18,10 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="wordmark" href="#top">Luz Quiñonero</a>
+      <a class="wordmark" href="index.html">Luz Quiñonero</a>
       <nav class="nav" aria-label="Primary">
         <a href="cv.html">CV</a>
-        <a href="#work" aria-current="page">Work with AI</a>
+        <a href="index.html" aria-current="page">Work with AI</a>
       </nav>
     </div>
   </header>
@@ -45,31 +46,14 @@
     <section class="work wrap" id="work" aria-label="Projects">
       <div class="work-head">
         <h2 class="section-title">Selected work</h2>
-        <p class="section-note">Hover to play · click to enlarge · <a href="wide.html">wide version →</a></p>
+        <p class="section-note">Wide layout (trial) · <a href="index.html">← grid version</a></p>
       </div>
 
-      <div class="cards">
+      <div class="cards--wide">
 
         <!-- 01 small world — public screenshot, passcode-gated walkthrough -->
-        <article class="card card--gated" data-gate data-enc="assets/web/sw.enc" data-index="01">
-          <div class="card-media" role="group" aria-label="small world preview">
-            <img class="card-video" src="assets/web/smallworld.png" alt="small world preview" />
-            <span class="card-index">01</span>
-            <button class="gate-trigger" type="button" aria-expanded="false" aria-controls="sw-form">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-              Walkthrough
-            </button>
-            <form class="gate-form" id="sw-form" hidden aria-label="Unlock small world walkthrough">
-              <label class="gate-label" for="sw-pass">Passcode</label>
-              <div class="gate-row">
-                <input class="gate-input" id="sw-pass" type="password" inputmode="text"
-                       autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="passcode" />
-                <button class="gate-btn" type="submit">Unlock</button>
-              </div>
-              <p class="gate-error" role="alert" aria-live="polite"></p>
-            </form>
-          </div>
-          <div class="card-body">
+        <article class="wcard card--gated" data-gate data-enc="assets/web/sw.enc" data-index="01">
+          <div class="wcard-body">
             <div class="card-titlerow">
               <h3 class="card-title">small world</h3>
               <span class="status status--active">Active</span>
@@ -90,18 +74,28 @@
               infrastructure work, among other things.
             </p>
           </div>
+          <div class="card-media" role="group" aria-label="small world preview">
+            <img class="card-video" src="assets/web/smallworld.png" alt="small world preview" />
+            <span class="card-index">01</span>
+            <button class="gate-trigger" type="button" aria-expanded="false" aria-controls="sw-form">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              Walkthrough
+            </button>
+            <form class="gate-form" id="sw-form" hidden aria-label="Unlock small world walkthrough">
+              <label class="gate-label" for="sw-pass">Passcode</label>
+              <div class="gate-row">
+                <input class="gate-input" id="sw-pass" type="password" inputmode="text"
+                       autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="passcode" />
+                <button class="gate-btn" type="submit">Unlock</button>
+              </div>
+              <p class="gate-error" role="alert" aria-live="polite"></p>
+            </form>
+          </div>
         </article>
 
         <!-- 02 Onyx -->
-        <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Onyx preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/Onyx.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">02</span>
-          </div>
-          <div class="card-body">
+        <article class="wcard">
+          <div class="wcard-body">
             <div class="card-titlerow">
               <h3 class="card-title">Onyx</h3>
               <span class="status status--shipped">Shipped</span>
@@ -124,18 +118,17 @@
               good practices for AI-assisted dev.
             </p>
           </div>
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Onyx preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/Onyx.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">02</span>
+          </div>
         </article>
 
         <!-- 03 Clingy -->
-        <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Clingy preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/Clingy.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">03</span>
-          </div>
-          <div class="card-body">
+        <article class="wcard">
+          <div class="wcard-body">
             <div class="card-titlerow">
               <h3 class="card-title">Clingy</h3>
               <span class="status status--active">Active</span>
@@ -157,18 +150,17 @@
               built the app.
             </p>
           </div>
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Clingy preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/Clingy.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">03</span>
+          </div>
         </article>
 
         <!-- 04 Kari Notes -->
-        <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Kari Notes preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/KariNotes.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">04</span>
-          </div>
-          <div class="card-body">
+        <article class="wcard">
+          <div class="wcard-body">
             <div class="card-titlerow">
               <h3 class="card-title">Kari Notes</h3>
               <span class="status status--archived">Archived</span>
@@ -187,18 +179,17 @@
               task + note + clipboard manager.
             </p>
           </div>
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Kari Notes preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/KariNotes.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">04</span>
+          </div>
         </article>
 
         <!-- 05 Camp Coordination -->
-        <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Camp Coordination preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">05</span>
-          </div>
-          <div class="card-body">
+        <article class="wcard">
+          <div class="wcard-body">
             <div class="card-titlerow">
               <h3 class="card-title">Camp Coordination</h3>
               <span class="status status--shipped">Shipped</span>
@@ -219,18 +210,17 @@
               fit, so I built our own with Claude.
             </p>
           </div>
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Camp Coordination preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">05</span>
+          </div>
         </article>
 
         <!-- 06 Issue Tracker -->
-        <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Issue Tracker preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/IssueTracker.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">06</span>
-          </div>
-          <div class="card-body">
+        <article class="wcard">
+          <div class="wcard-body">
             <div class="card-titlerow">
               <h3 class="card-title">Issue Tracker</h3>
               <span class="status status--active">Active</span>
@@ -249,15 +239,17 @@
               something fully owned and customisable rather than an off-the-shelf tool.
             </p>
           </div>
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Issue Tracker preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/IssueTracker.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">06</span>
+          </div>
         </article>
 
         <!-- 07 Year Cal -->
-        <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
-            <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
-            <span class="card-index">07</span>
-          </div>
-          <div class="card-body">
+        <article class="wcard">
+          <div class="wcard-body">
             <div class="card-titlerow">
               <h3 class="card-title">Year Cal</h3>
               <span class="status status--active">Active</span>
@@ -279,6 +271,10 @@
               Google Calendar has no good yearly view, so I made one. It stays synced
               with my calendars, and I can add and edit events straight from it.
             </p>
+          </div>
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
+            <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
+            <span class="card-index">07</span>
           </div>
         </article>
 
@@ -326,7 +322,5 @@
     </button>
     <div class="lightbox-stage"></div>
   </div>
-
-  <script src="js/lightbox.js" defer></script>
 </body>
 </html>
