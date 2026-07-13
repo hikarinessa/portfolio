@@ -304,6 +304,33 @@ body > * { position: relative; z-index: 1; }
     50% / 7px 7px;
 }
 
+/* ---------- closing catch-all card ---------- */
+.card--more {
+  grid-column: 1 / -1;
+  background: color-mix(in srgb, var(--accent) 6%, var(--panel));
+  border-color: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.card--more:hover { transform: none; box-shadow: none; border-color: color-mix(in srgb, var(--accent) 28%, transparent); }
+.more-inner {
+  padding: clamp(1.6rem, 4vw, 2.5rem);
+  display: grid; grid-template-columns: minmax(180px, 0.85fr) 2fr;
+  gap: clamp(1rem, 3.5vw, 3rem); align-items: center;
+}
+.more-head { display: flex; align-items: center; gap: 0.7rem; }
+.more-mark {
+  width: 20px; height: 20px; border-radius: 4px; flex: none;
+  background:
+    repeating-conic-gradient(var(--checker-a) 0% 25%, var(--checker-b) 0% 50%)
+    50% / 10px 10px;
+}
+.more-text {
+  margin: 0; max-width: 62ch;
+  font-size: 1.05rem; color: var(--ink-soft);
+}
+@media (max-width: 680px) {
+  .more-inner { grid-template-columns: 1fr; gap: 1.1rem; }
+}
+
 /* ---------- click-to-enlarge affordance ---------- */
 .card-media[role="button"] { cursor: zoom-in; }
 .card--gated .card-media { cursor: zoom-in; }
