@@ -18,6 +18,7 @@
   --accent-deep: #A81F63;
   --teal:        #0E8F86;  /* channel-debug teal, used sparingly */
   --amber:       #B06A00;
+  --brand-sw:    #B06A00;  /* small world brand accent (swap freely) */
 
   /* Missing-texture checker tones */
   --checker-a:   #14171C;
@@ -212,6 +213,7 @@ body > * { position: relative; z-index: 1; }
   display: block; background: var(--ink);
 }
 .card-index {
+  display: none; /* numbers removed */
   position: absolute; top: 0.7rem; left: 0.85rem;
   font-family: var(--mono); font-size: 0.85rem; font-weight: 500;
   color: #fff; background: rgba(20,23,28,0.55);
@@ -276,6 +278,7 @@ body > * { position: relative; z-index: 1; }
   letter-spacing: -0.01em; margin: 0;
 }
 .card-problem { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+.brand-sw { color: var(--brand-sw); }
 
 /* status tag */
 .status {
@@ -375,8 +378,6 @@ body > * { position: relative; z-index: 1; }
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 .wcard:hover { border-color: var(--accent); box-shadow: 0 16px 40px -20px rgba(20,23,28,0.42); }
-.wcard:nth-child(even) { grid-template-columns: 1.9fr 1fr; }
-.wcard:nth-child(even) .card-media { order: -1; }
 .wcard-body {
   padding: clamp(1.5rem, 3vw, 2.6rem);
   display: flex; flex-direction: column; gap: 0.9rem; justify-content: center;
@@ -392,9 +393,8 @@ body > * { position: relative; z-index: 1; }
 .cards--wide .card--more { align-self: stretch; grid-column: auto; }
 
 @media (max-width: 820px) {
-  .wcard, .wcard:nth-child(even) { grid-template-columns: 1fr; min-height: 0; }
-  .wcard .card-media,
-  .wcard:nth-child(even) .card-media { order: -1; aspect-ratio: 16 / 10; height: auto; }
+  .wcard { grid-template-columns: 1fr; min-height: 0; }
+  .wcard .card-media { order: -1; aspect-ratio: 16 / 10; height: auto; }
 }
 
 /* ---------- click-to-enlarge affordance ---------- */
