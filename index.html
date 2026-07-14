@@ -30,7 +30,7 @@
     <section class="hero wrap">
       <p class="eyebrow">Showcase</p>
       <h1 class="hero-title">
-        Things I've made<br />
+        What I've built<br />
         <span class="hero-accent">with AI.</span>
       </h1>
       <p class="hero-lede">
@@ -44,17 +44,203 @@
     <!-- WORK -->
     <section class="work wrap" id="work" aria-label="Projects">
       <div class="work-head">
-        <h2 class="section-title">Selected work</h2>
+        <h2 class="section-title">Solo Projects</h2>
         <p class="section-note">Hover to play · click to enlarge · <a href="wide.html">wide version →</a></p>
       </div>
 
       <div class="cards">
 
-        <!-- 01 small world — public screenshot, passcode-gated walkthrough -->
-        <article class="card card--gated" data-gate data-enc="assets/web/sw.enc" data-index="01">
+        <!-- 01 Onyx -->
+        <article class="card">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Onyx preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/Onyx.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">01</span>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Onyx</h3>
+              <span class="status status--shipped">Shipped</span>
+            </div>
+            <p class="card-problem">
+              A markdown editor inspired by my Obsidian setup — lightweight,
+              but feature-rich.
+            </p>
+            <dl class="specsheet">
+              <div><dt>MVP</dt><dd>5 days with AI</dd></div>
+              <div><dt>Stack</dt><dd>Tauri · React · Rust</dd></div>
+              <div><dt>Link</dt><dd><a href="https://github.com/hikarinessa/onyx" target="_blank" rel="noopener">Browse Git project →</a></dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              I built Onyx to replicate my Obsidian setup in something lighter. The
+              design was clear from the start, so most of the work went into setting
+              up reliable ways to build with Claude Code — mostly an exercise in
+              good practices for AI-assisted dev.
+            </p>
+          </div>
+        </article>
+
+        <!-- 02 Clingy -->
+        <article class="card">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Clingy preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/Clingy.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">02</span>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Clingy</h3>
+              <span class="status status--active">Active</span>
+            </div>
+            <p class="card-problem">
+              A fingerboard training companion for climbers — build a session,
+              run it on a glanceable timer, log every hang. Ships as an Android APK.
+            </p>
+            <dl class="specsheet">
+              <div><dt>MVP</dt><dd>One afternoon with AI</dd></div>
+              <div><dt>Stack</dt><dd>Kotlin · Jetpack Compose · Android</dd></div>
+              <div><dt>Link</dt><dd><span class="muted">Android APK — on request</span></dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              I interviewed the customer to get a spec complete enough for Claude to
+              one-shot the mockup. A couple of iterations to refine it, and Claude
+              built the app.
+            </p>
+          </div>
+        </article>
+
+        <!-- 03 Kari Notes -->
+        <article class="card">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Kari Notes preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/KariNotes.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">03</span>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Kari Notes</h3>
+              <span class="status status--archived">Archived</span>
+            </div>
+            <p class="card-problem">
+              My first note-taking app — a hybrid note / task / clipboard helper.
+              Notes are blocks you can mark done and copy to the clipboard in a tap.
+            </p>
+            <dl class="specsheet">
+              <div><dt>Stack</dt><dd>Swift · SwiftUI · macOS</dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              My first experimental note-taking app developed with AI. I wanted a
+              task + note + clipboard manager.
+            </p>
+          </div>
+        </article>
+
+        <!-- 04 Camp Coordination -->
+        <article class="card">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Camp Coordination preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">04</span>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Camp Coordination</h3>
+              <span class="status status--shipped">Shipped</span>
+            </div>
+            <p class="card-problem">
+              A PWA for coordinating shifts and schedules at a co-created festival.
+              Define shift grids, roles and point values; people sign up, queue for
+              slots, and RSVP to activities.
+            </p>
+            <dl class="specsheet">
+              <div><dt>MVP</dt><dd>2 days with AI</dd></div>
+              <div><dt>Stack</dt><dd>SvelteKit · Supabase · TS</dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              We wanted something customisable and couldn't find an online tool that
+              fit, so I built our own with Claude.
+            </p>
+          </div>
+        </article>
+
+        <!-- 05 Issue Tracker -->
+        <article class="card">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Issue Tracker preview">
+            <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
+              <source src="assets/web/IssueTracker.mp4" type="video/mp4" />
+            </video>
+            <span class="card-index">05</span>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Issue Tracker</h3>
+              <span class="status status--active">Active</span>
+            </div>
+            <p class="card-problem">
+              A Linear-style issue tracker I built for the Small World devs — logging
+              tickets and triaging issues. Fully owned and customisable.
+            </p>
+            <dl class="specsheet">
+              <div><dt>Stack</dt><dd>Next.js · Postgres · TS</dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              Built for the Small World devs to log and triage tickets. I wanted
+              something fully owned and customisable rather than an off-the-shelf tool.
+            </p>
+          </div>
+        </article>
+
+        <!-- 06 Year Cal -->
+        <article class="card">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
+            <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
+            <span class="card-index">06</span>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">Year Cal</h3>
+              <span class="status status--active">Active</span>
+            </div>
+            <p class="card-problem">
+              A yearly view for Google Calendar — the whole year at once, which
+              Google itself doesn't do well. Synced with my calendars, and I can
+              add, edit and update events straight from it.
+            </p>
+            <dl class="specsheet">
+              <div><dt>MVP</dt><dd>1 afternoon with AI</dd></div>
+              <div><dt>Stack</dt><dd>React · TypeScript · PWA</dd></div>
+              <div><dt>Services</dt><dd>Google Calendar API · OAuth</dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              Google Calendar has no good yearly view, so I made one. It stays synced
+              with my calendars, and I can add and edit events straight from it.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="work-head work-head--sub">
+        <h2 class="section-title">Team Work</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- 07 small world — public screenshot, passcode-gated walkthrough -->
+        <article class="card card--gated" data-gate data-enc="assets/web/sw.enc" data-index="07">
           <div class="card-media" role="group" aria-label="small world preview">
             <img class="card-video" src="assets/web/smallworld.png" alt="small world preview" />
-            <span class="card-index">01</span>
+            <span class="card-index">07</span>
             <button class="gate-trigger" type="button" aria-expanded="false" aria-controls="sw-form">
               <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
               Walkthrough
@@ -80,7 +266,6 @@
             </p>
             <dl class="specsheet">
               <div><dt>Stack</dt><dd>React · Capacitor · Rust · TS</dd></div>
-              <div><dt>Role</dt><dd>Developer in a team</dd></div>
               <div><dt>Link</dt><dd><span class="muted">Private</span></dd></div>
             </dl>
             <p class="ai-note">
@@ -92,196 +277,9 @@
           </div>
         </article>
 
-        <!-- 02 Onyx -->
-        <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Onyx preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/Onyx.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">02</span>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">Onyx</h3>
-              <span class="status status--shipped">Shipped</span>
-            </div>
-            <p class="card-problem">
-              A markdown editor inspired by my Obsidian setup — lightweight,
-              but feature-rich.
-            </p>
-            <dl class="specsheet">
-              <div><dt>MVP</dt><dd>5 days with AI</dd></div>
-              <div><dt>Stack</dt><dd>Tauri · React · Rust</dd></div>
-              <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><a href="https://github.com/hikarinessa/onyx" target="_blank" rel="noopener">Browse Git project →</a></dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              I built Onyx to replicate my Obsidian setup in something lighter. The
-              design was clear from the start, so most of the work went into setting
-              up reliable ways to build with Claude Code — mostly an exercise in
-              good practices for AI-assisted dev.
-            </p>
-          </div>
-        </article>
+      </div>
 
-        <!-- 03 Clingy -->
-        <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Clingy preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/Clingy.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">03</span>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">Clingy</h3>
-              <span class="status status--active">Active</span>
-            </div>
-            <p class="card-problem">
-              A fingerboard training companion for climbers — build a session,
-              run it on a glanceable timer, log every hang. Ships as an Android APK.
-            </p>
-            <dl class="specsheet">
-              <div><dt>MVP</dt><dd>One afternoon with AI</dd></div>
-              <div><dt>Stack</dt><dd>Kotlin · Jetpack Compose · Android</dd></div>
-              <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><span class="muted">Android APK — on request</span></dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              I interviewed the customer to get a spec complete enough for Claude to
-              one-shot the mockup. A couple of iterations to refine it, and Claude
-              built the app.
-            </p>
-          </div>
-        </article>
-
-        <!-- 04 Kari Notes -->
-        <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Kari Notes preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/KariNotes.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">04</span>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">Kari Notes</h3>
-              <span class="status status--archived">Archived</span>
-            </div>
-            <p class="card-problem">
-              My first note-taking app — a hybrid note / task / clipboard helper.
-              Notes are blocks you can mark done and copy to the clipboard in a tap.
-            </p>
-            <dl class="specsheet">
-              <div><dt>Stack</dt><dd>Swift · SwiftUI · macOS</dd></div>
-              <div><dt>Role</dt><dd>Solo</dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              My first experimental note-taking app developed with AI. I wanted a
-              task + note + clipboard manager.
-            </p>
-          </div>
-        </article>
-
-        <!-- 05 Camp Coordination -->
-        <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Camp Coordination preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">05</span>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">Camp Coordination</h3>
-              <span class="status status--shipped">Shipped</span>
-            </div>
-            <p class="card-problem">
-              A PWA for coordinating shifts and schedules at a co-created festival.
-              Define shift grids, roles and point values; people sign up, queue for
-              slots, and RSVP to activities.
-            </p>
-            <dl class="specsheet">
-              <div><dt>MVP</dt><dd>2 days with AI</dd></div>
-              <div><dt>Stack</dt><dd>SvelteKit · Supabase · TS</dd></div>
-              <div><dt>Role</dt><dd>Solo</dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              We wanted something customisable and couldn't find an online tool that
-              fit, so I built our own with Claude.
-            </p>
-          </div>
-        </article>
-
-        <!-- 06 Issue Tracker -->
-        <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Issue Tracker preview">
-            <video class="card-video" loop muted playsinline preload="auto"
-                   aria-hidden="true">
-              <source src="assets/web/IssueTracker.mp4" type="video/mp4" />
-            </video>
-            <span class="card-index">06</span>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">Issue Tracker</h3>
-              <span class="status status--active">Active</span>
-            </div>
-            <p class="card-problem">
-              A Linear-style issue tracker I built for the Small World devs — logging
-              tickets and triaging issues. Fully owned and customisable.
-            </p>
-            <dl class="specsheet">
-              <div><dt>Stack</dt><dd>Next.js · Postgres · TS</dd></div>
-              <div><dt>Role</dt><dd>Solo</dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              Built for the Small World devs to log and triage tickets. I wanted
-              something fully owned and customisable rather than an off-the-shelf tool.
-            </p>
-          </div>
-        </article>
-
-        <!-- 07 Year Cal -->
-        <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
-            <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
-            <span class="card-index">07</span>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">Year Cal</h3>
-              <span class="status status--active">Active</span>
-            </div>
-            <p class="card-problem">
-              A yearly view for Google Calendar — the whole year at once, which
-              Google itself doesn't do well. Synced with my calendars, and I can
-              add, edit and update events straight from it.
-            </p>
-            <dl class="specsheet">
-              <div><dt>MVP</dt><dd>1 afternoon with AI</dd></div>
-              <div><dt>Stack</dt><dd>React · TypeScript · PWA</dd></div>
-              <div><dt>Services</dt><dd>Google Calendar API · OAuth</dd></div>
-              <div><dt>Role</dt><dd>Solo</dd></div>
-              <div><dt>Link</dt><dd><span class="muted">Personal tool</span></dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              Google Calendar has no good yearly view, so I made one. It stays synced
-              with my calendars, and I can add and edit events straight from it.
-            </p>
-          </div>
-        </article>
-
+      <div class="cards">
         <!-- Closing catch-all card (no media) -->
         <article class="card card--more">
           <div class="more-inner">
@@ -294,8 +292,7 @@
                 to cut friction and automate whatever I can. Small navbar utilities,
                 book summaries and study guides, code-review agents, custom Claude Code
                 skills, Telegram bots, and spinning up whole websites or mockups in
-                minutes. If something's repetitive, I'd rather build a tool for it than
-                keep doing it by hand.
+                minutes.
               </p>
               <p class="more-listlabel">A few areas I've gone deeper on:</p>
               <ul class="more-list">
@@ -303,12 +300,11 @@
                 <li>An OS for my own AI work</li>
                 <li>Knowledge-base tooling</li>
                 <li>Integrations &amp; plumbing</li>
-                <li>Facilitation &amp; coaching skills</li>
+                <li>Reflection and Design support</li>
               </ul>
             </div>
           </div>
         </article>
-
       </div>
     </section>
   </main>
