@@ -18,7 +18,7 @@
   --accent-deep: #A81F63;
   --teal:        #0E8F86;  /* channel-debug teal, used sparingly */
   --amber:       #B06A00;
-  --brand-sw:    #B06A00;  /* small world brand accent (swap freely) */
+  --brand-sw:    #26315E;  /* small world brand accent — deep indigo */
 
   /* Missing-texture checker tones */
   --checker-a:   #14171C;
