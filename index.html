@@ -53,13 +53,47 @@
 
       <div class="cards">
 
-        <!-- 01 Onyx -->
+        <!-- 01 tu-ciclo -->
         <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Onyx preview">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge tu-ciclo preview">
+            <img class="card-video" src="assets/web/TuCiclo.png" alt="tu-ciclo preview" />
+            <span class="card-index">01</span>
+          </div>
+          <div class="card-body">
+            <div class="card-titlerow">
+              <h3 class="card-title">tu-ciclo</h3>
+              <span class="status status--shipped">Shipped</span>
+            </div>
+            <p class="card-problem">
+              A quiet period tracker I run for friends — log the day in a few taps,
+              see the cycle, get a prediction that says how sure it is. No ads, no
+              analytics; the data lives on one small server and can be exported or
+              deleted any time.
+            </p>
+            <dl class="specsheet">
+              <div><dt>MVP</dt><dd>1 day with AI</dd></div>
+              <div><dt>Stack</dt><dd>SvelteKit · SQLite · TS</dd></div>
+              <div><dt>Infra</dt><dd>Hetzner · Docker · Caddy</dd></div>
+              <div><dt>Link</dt><dd><a href="https://tu-ciclo.app/welcome" target="_blank" rel="noopener">tu-ciclo.app</a> <span class="muted">(invite only)</span></dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              The app itself came together with Claude in a day; production took
+              three weeks, most of it on what a health-data app has to get right:
+              a security audit pass, GDPR-shaped export and deletion, backups with
+              a tested restore, and a reviewed-PR workflow once real people were
+              logging real data.
+            </p>
+          </div>
+        </article>
+
+        <!-- 02 Onyx -->
+        <article class="card">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Onyx preview">
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/Onyx.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">01</span>
+            <span class="card-index">02</span>
           </div>
           <div class="card-body">
             <div class="card-titlerow">
@@ -85,13 +119,13 @@
           </div>
         </article>
 
-        <!-- 02 Clingy -->
+        <!-- 03 Clingy -->
         <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Clingy preview">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Clingy preview">
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/Clingy.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">02</span>
+            <span class="card-index">03</span>
           </div>
           <div class="card-body">
             <div class="card-titlerow">
@@ -116,13 +150,13 @@
           </div>
         </article>
 
-        <!-- 03 Kari Notes -->
+        <!-- 04 Kari Notes -->
         <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Kari Notes preview">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Kari Notes preview">
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/KariNotes.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">03</span>
+            <span class="card-index">04</span>
           </div>
           <div class="card-body">
             <div class="card-titlerow">
@@ -144,13 +178,13 @@
           </div>
         </article>
 
-        <!-- 04 Camp Coordination -->
+        <!-- 05 Camp Coordination -->
         <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Camp Coordination preview">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Camp Coordination preview">
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">04</span>
+            <span class="card-index">05</span>
           </div>
           <div class="card-body">
             <div class="card-titlerow">
@@ -174,18 +208,18 @@
           </div>
         </article>
 
-        <!-- 05 Issue Tracker -->
+        <!-- 06 Issue Tracker -->
         <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Issue Tracker preview">
+          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Issue Tracker preview">
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/IssueTracker.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">05</span>
+            <span class="card-index">06</span>
           </div>
           <div class="card-body">
             <div class="card-titlerow">
               <h3 class="card-title">Issue Tracker</h3>
-              <span class="status status--active">Active</span>
+              <span class="status status--archived">Archived</span>
             </div>
             <p class="card-problem">
               A Linear-style issue tracker I built for the <span class="brand-sw">small world</span> devs — logging
@@ -202,11 +236,11 @@
           </div>
         </article>
 
-        <!-- 06 Year Cal -->
+        <!-- 07 Year Cal -->
         <article class="card">
-          <div class="card-media" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
+          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
             <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
-            <span class="card-index">06</span>
+            <span class="card-index">07</span>
           </div>
           <div class="card-body">
             <div class="card-titlerow">
@@ -227,40 +261,6 @@
               <span class="ai-label">How I built it with AI</span>
               Google Calendar has no good yearly view, so I made one. It stays synced
               with my calendars, and I can add and edit events straight from it.
-            </p>
-          </div>
-        </article>
-
-        <!-- 07 tu-ciclo -->
-        <article class="card">
-          <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge tu-ciclo preview">
-            <img class="card-video" src="assets/web/TuCiclo.png" alt="tu-ciclo preview" />
-            <span class="card-index">07</span>
-          </div>
-          <div class="card-body">
-            <div class="card-titlerow">
-              <h3 class="card-title">tu-ciclo</h3>
-              <span class="status status--active">Active</span>
-            </div>
-            <p class="card-problem">
-              A quiet period tracker I run for friends — log the day in a few taps,
-              see the cycle, get a prediction that says how sure it is. No ads, no
-              analytics; the data lives on one small server and can be exported or
-              deleted any time.
-            </p>
-            <dl class="specsheet">
-              <div><dt>MVP</dt><dd>1 day with AI</dd></div>
-              <div><dt>Stack</dt><dd>SvelteKit · SQLite · TS</dd></div>
-              <div><dt>Infra</dt><dd>Hetzner · Docker · Caddy</dd></div>
-              <div><dt>Link</dt><dd><a href="https://tu-ciclo.app/welcome" target="_blank" rel="noopener">tu-ciclo.app</a> <span class="muted">(invite only)</span></dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              The app itself came together with Claude in a day; production took
-              three weeks, most of it on what a health-data app has to get right:
-              a security audit pass, GDPR-shaped export and deletion, backups with
-              a tested restore, and a reviewed-PR workflow once real people were
-              logging real data.
             </p>
           </div>
         </article>
