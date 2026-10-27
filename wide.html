@@ -48,13 +48,62 @@
     <!-- WORK -->
     <section class="work wrap" id="work" aria-label="Projects">
       <div class="work-head">
-        <h2 class="section-title">Solo Projects</h2>
+        <h2 class="section-title">Team Work</h2>
         <p class="section-note">Hover to play · click to enlarge · <a href="index.html">← grid version</a></p>
       </div>
 
       <div class="cards--wide">
 
-        <!-- 01 tu-ciclo -->
+        <!-- 01 small world — public screenshot, passcode-gated walkthrough -->
+        <article class="wcard card--gated" data-gate data-enc="assets/web/sw.enc" data-index="01">
+          <div class="wcard-body">
+            <div class="card-titlerow">
+              <h3 class="card-title brand-sw">small world</h3>
+              <span class="status status--active">Active</span>
+            </div>
+            <p class="card-problem">
+              A trust-based social network grounded on a map — for individuals and
+              communities to coordinate.
+            </p>
+            <dl class="specsheet">
+              <div><dt>Stack</dt><dd>React · Capacitor · Rust · TS</dd></div>
+              <div><dt>Link</dt><dd><a href="https://sml.world" target="_blank" rel="noopener">sml.world</a> <span class="muted">(invite only)</span></dd></div>
+            </dl>
+            <p class="ai-note">
+              <span class="ai-label">How I built it with AI</span>
+              I was part of the very small team behind <span class="brand-sw">small world</span>, wearing a lot of
+              hats — project coordination, UI/UX design, development with AI, and
+              infrastructure work, among other things.
+            </p>
+          </div>
+          <div class="card-media" role="group" aria-label="small world preview">
+            <img class="card-video" src="assets/web/smallworld.png" alt="small world preview" />
+            <span class="card-index">01</span>
+            <button class="gate-trigger" type="button" aria-expanded="false" aria-controls="sw-form">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              Video
+            </button>
+            <form class="gate-form" id="sw-form" hidden aria-label="Unlock small world walkthrough">
+              <label class="gate-label" for="sw-pass">Passcode</label>
+              <div class="gate-row">
+                <input class="gate-input" id="sw-pass" type="password" inputmode="text"
+                       autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="passcode" />
+                <button class="gate-btn" type="submit">Unlock</button>
+              </div>
+              <p class="gate-error" role="alert" aria-live="polite"></p>
+            </form>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="work-head work-head--sub">
+        <h2 class="section-title">Solo Projects</h2>
+      </div>
+
+      <div class="cards--wide">
+
+        <!-- 02 tu-ciclo -->
         <article class="wcard">
           <div class="wcard-body">
             <div class="card-titlerow">
@@ -84,11 +133,11 @@
           </div>
           <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge tu-ciclo preview">
             <img class="card-video" src="assets/web/TuCiclo.png" alt="tu-ciclo preview" />
-            <span class="card-index">01</span>
+            <span class="card-index">02</span>
           </div>
         </article>
 
-        <!-- 02 Onyx -->
+        <!-- 03 Onyx -->
         <article class="wcard">
           <div class="wcard-body">
             <div class="card-titlerow">
@@ -116,11 +165,11 @@
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/Onyx.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">02</span>
+            <span class="card-index">03</span>
           </div>
         </article>
 
-        <!-- 03 Clingy -->
+        <!-- 04 Clingy -->
         <article class="wcard">
           <div class="wcard-body">
             <div class="card-titlerow">
@@ -147,11 +196,11 @@
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/Clingy.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">03</span>
+            <span class="card-index">04</span>
           </div>
         </article>
 
-        <!-- 04 Kari Notes -->
+        <!-- 05 Kari Notes -->
         <article class="wcard">
           <div class="wcard-body">
             <div class="card-titlerow">
@@ -175,11 +224,11 @@
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/KariNotes.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">04</span>
+            <span class="card-index">05</span>
           </div>
         </article>
 
-        <!-- 05 Camp Coordination -->
+        <!-- 06 Camp Coordination -->
         <article class="wcard">
           <div class="wcard-body">
             <div class="card-titlerow">
@@ -205,11 +254,11 @@
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/CampCoordination.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">05</span>
+            <span class="card-index">06</span>
           </div>
         </article>
 
-        <!-- 06 Issue Tracker -->
+        <!-- 07 Issue Tracker -->
         <article class="wcard">
           <div class="wcard-body">
             <div class="card-titlerow">
@@ -233,11 +282,11 @@
             <video class="card-video" loop muted playsinline preload="auto" aria-hidden="true">
               <source src="assets/web/IssueTracker.mp4" type="video/mp4" />
             </video>
-            <span class="card-index">06</span>
+            <span class="card-index">07</span>
           </div>
         </article>
 
-        <!-- 07 Year Cal -->
+        <!-- 08 Year Cal -->
         <article class="wcard">
           <div class="wcard-body">
             <div class="card-titlerow">
@@ -262,56 +311,7 @@
           </div>
           <div class="card-media media--alt" role="button" tabindex="0" aria-label="Enlarge Year Cal preview">
             <img class="card-video" src="assets/web/YearCal.png" alt="Year Cal preview" />
-            <span class="card-index">07</span>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="work-head work-head--sub">
-        <h2 class="section-title">Team Work</h2>
-      </div>
-
-      <div class="cards--wide">
-
-        <!-- 08 small world — public screenshot, passcode-gated walkthrough -->
-        <article class="wcard card--gated" data-gate data-enc="assets/web/sw.enc" data-index="08">
-          <div class="wcard-body">
-            <div class="card-titlerow">
-              <h3 class="card-title brand-sw">small world</h3>
-              <span class="status status--active">Active</span>
-            </div>
-            <p class="card-problem">
-              A trust-based social network grounded on a map — for individuals and
-              communities to coordinate.
-            </p>
-            <dl class="specsheet">
-              <div><dt>Stack</dt><dd>React · Capacitor · Rust · TS</dd></div>
-              <div><dt>Link</dt><dd><a href="https://sml.world" target="_blank" rel="noopener">sml.world</a> <span class="muted">(invite only)</span></dd></div>
-            </dl>
-            <p class="ai-note">
-              <span class="ai-label">How I built it with AI</span>
-              I was part of the very small team behind <span class="brand-sw">small world</span>, wearing a lot of
-              hats — project coordination, UI/UX design, development with AI, and
-              infrastructure work, among other things.
-            </p>
-          </div>
-          <div class="card-media" role="group" aria-label="small world preview">
-            <img class="card-video" src="assets/web/smallworld.png" alt="small world preview" />
             <span class="card-index">08</span>
-            <button class="gate-trigger" type="button" aria-expanded="false" aria-controls="sw-form">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-              Video
-            </button>
-            <form class="gate-form" id="sw-form" hidden aria-label="Unlock small world walkthrough">
-              <label class="gate-label" for="sw-pass">Passcode</label>
-              <div class="gate-row">
-                <input class="gate-input" id="sw-pass" type="password" inputmode="text"
-                       autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="passcode" />
-                <button class="gate-btn" type="submit">Unlock</button>
-              </div>
-              <p class="gate-error" role="alert" aria-live="polite"></p>
-            </form>
           </div>
         </article>
 
